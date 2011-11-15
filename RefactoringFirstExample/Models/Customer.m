@@ -14,6 +14,8 @@
 
 @synthesize name;
 @synthesize rentals;
+@synthesize totalAmountOwed;
+@synthesize frequentRenterPoints;
 
 - (void)dealloc {
     
@@ -47,8 +49,11 @@
 
 -(NSString *)statement {
 
-    CGFloat totalAmount = 0;
-    NSInteger frequentRenterPoints = 0;
+//    CGFloat totalAmount = 0;
+
+    self.totalAmountOwed = 0.0;
+
+    self.frequentRenterPoints = 0;
 
     NSMutableString *result = [NSMutableString stringWithFormat:@"\nRental Record for %@", self.name];
     
@@ -80,21 +85,21 @@
             
         } // switch ()
         
-        ++frequentRenterPoints;
+        ++self.frequentRenterPoints;
         
-        if (rental.movie.priceCode == NewReleasePriceCode && rental.daysRented > 1) ++frequentRenterPoints;
+        if (rental.movie.priceCode == NewReleasePriceCode && rental.daysRented > 1) ++self.frequentRenterPoints;
 
 
         [result appendFormat:@"\t%@\t%.2f\n", rental.movie.title, thisAmount];
 
-        totalAmount += thisAmount;
+        self.totalAmountOwed += thisAmount;
         
     } // for (self.rentals) 
 
 
     //add footer lines
-    [result appendFormat:@"\nAmount owed is %.2f", totalAmount];
-    [result appendFormat:@"\nYou earned %d frequent renter points", frequentRenterPoints];
+    [result appendFormat:@"\nAmount owed is %.2f", self.totalAmountOwed];
+    [result appendFormat:@"\nYou earned %d frequent renter points", self.frequentRenterPoints];
 
     return result;
 }

@@ -28,43 +28,123 @@
     [super tearDown];
 }
 
-- (void) testCustomerStatement {
+- (void) testCustomerAmountOwedChildrensMovieLessThenThreeDays {
 
-    NSUInteger _daysRented = 0;
-
-    Movie *movie = nil;
-    
-    NSArray *movies =
-    [NSArray arrayWithObjects:
-
-    // 0
-     [NSDictionary dictionaryWithObjectsAndKeys:@"Mary Poppins", @"title", [NSNumber numberWithUnsignedInteger: ChildrensPriceCode], @"priceCode", nil],
-
-    // 1
-     [NSDictionary dictionaryWithObjectsAndKeys:@"Dirty Dozen", @"title", [NSNumber numberWithUnsignedInteger:   RegularPriceCode], @"priceCode", nil],
-
-    // 2
-     [NSDictionary dictionaryWithObjectsAndKeys:@"Inception", @"title", [NSNumber numberWithUnsignedInteger:NewReleasePriceCode], @"priceCode", nil],
-
-    // 3
-     [NSDictionary dictionaryWithObjectsAndKeys:@"The Wizard of OZ", @"title", [NSNumber numberWithUnsignedInteger: ChildrensPriceCode], @"priceCode", nil],
-
-    // 4
-     [NSDictionary dictionaryWithObjectsAndKeys:@"Blowup", @"title", [NSNumber numberWithUnsignedInteger:   RegularPriceCode], @"priceCode", nil],
-
-     nil];
+    NSUInteger _daysRented;
 
     Customer *customer = [[[Customer alloc] initWithName:@"Doug"] autorelease];
+
+    Movie *movie =
+    [[[Movie alloc] initWithMovieDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                             @"Mary Poppins", @"title",
+                                             [NSNumber numberWithUnsignedInteger:ChildrensPriceCode], @"priceCode",
+                                             nil]
+      ] autorelease];
+
+
+
+    // Less then 3 day rental
+    _daysRented = 1;
+    Rental *rental = [[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease];
+
+    [customer addRental:rental];
+
+    // To set the ivars for this test.
+    (void)[customer statement];
+
+    CGFloat _totalAmountOwed_ = 1.5;
+    DLog(@"_totalAmountOwed_ %.02f", _totalAmountOwed_);
+    STAssertEqualsWithAccuracy(_totalAmountOwed_, customer.totalAmountOwed, .01, nil);
+
+
+
+}
+
+- (void) testCustomerAmountOwedChildrensMovieGreaterThenThreeDays {
+
+    NSUInteger _daysRented;
+
+    Customer *customer = [[[Customer alloc] initWithName:@"Doug"] autorelease];
+
+    Movie *movie =
+    [[[Movie alloc] initWithMovieDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                             @"Mary Poppins", @"title",
+                                             [NSNumber numberWithUnsignedInteger:ChildrensPriceCode], @"priceCode",
+                                             nil]
+      ] autorelease];
+
+
+
+    // Greater then 3 day rental
+    _daysRented = 5;
+    Rental *rental = [[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease];
+
+    [customer addRental:rental];
+
+    // To set the ivars for this test.
+    (void)[customer statement];
+
+    CGFloat _totalAmountOwed_ = 1.5 + (rental.daysRented - 3) * 1.5;
+    DLog(@"_totalAmountOwed_ %.02f", _totalAmountOwed_);
+    STAssertEqualsWithAccuracy(_totalAmountOwed_, customer.totalAmountOwed, .01, nil);
+
+
+}
+
+- (void) testCustomerAmountOwedRegularMovieGreaterThenTwoDays {
     
-    movie = [[[Movie alloc] initWithMovieDictionary:[movies objectAtIndex:0]] autorelease];
+    NSUInteger _daysRented;
     
-    _daysRented = 3;
+    Customer *customer = [[[Customer alloc] initWithName:@"Doug"] autorelease];
+    
+    Movie *movie =
+    [[[Movie alloc] initWithMovieDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                             @"Dirty Dozen", @"title",
+                                             [NSNumber numberWithUnsignedInteger:RegularPriceCode], @"priceCode",
+                                             nil]
+      ] autorelease];
+    
+    
+    
+    // Greater then 2 day rental
+    _daysRented = 4;
+    Rental *rental = [[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease];
+    
+    [customer addRental:rental];
+    
+    // To set the ivars for this test.
+    (void)[customer statement];
+    
+    CGFloat _totalAmountOwed_ = 2.0 + (rental.daysRented - 2) * 1.5;
+    DLog(@"_totalAmountOwed_ %.02f", _totalAmountOwed_);
+    STAssertEqualsWithAccuracy(_totalAmountOwed_, customer.totalAmountOwed, .01, nil);
+    
+}
+
+- (void) testCustomerAmountOwedRegularMovieTwoDaysOrLess {
+    
+    NSUInteger _daysRented;
+    
+    Customer *customer = [[[Customer alloc] initWithName:@"Doug"] autorelease];
+    
+    Movie *movie =
+    [[[Movie alloc] initWithMovieDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                             @"Dirty Dozen", @"title",
+                                             [NSNumber numberWithUnsignedInteger:RegularPriceCode], @"priceCode",
+                                             nil]
+      ] autorelease];
+    
+    
+    // Less then or equal to 2 day rental
+    _daysRented = 2;
     [customer addRental:[[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease]];
     
-    STAssertTrue(_daysRented ==[(Rental *)[customer.rentals objectAtIndex:(customer.rentals.count - 1)] daysRented], @"rental %d should be of length %d", 0, _daysRented);
-
-    DLog(@"%@", [customer statement]);
-        
+    // To set the ivars for this test.
+    (void)[customer statement];
+    
+    CGFloat _totalAmountOwed_ = 2.0;
+    STAssertEqualsWithAccuracy(_totalAmountOwed_, customer.totalAmountOwed, .01, nil);
+    
 }
 
 - (void) testCreateCustomer {

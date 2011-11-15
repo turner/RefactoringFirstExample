@@ -23,19 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Customer.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.m">
+      <file leaf-file-name="Customer.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="29" selection-start="2028" selection-end="2028" vertical-scroll-proportion="0.71784234">
+            <state line="28" column="49" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RefactoringFirstExampleTests.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RefactoringFirstExampleTests.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="38" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0">
+            <state line="46" column="19" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.34582442">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="86" selection-start="1572" selection-end="1615" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,15 +72,15 @@
         <option value="$PROJECT_DIR$/RefactoringFirstExample/Models/Movie.m" />
         <option value="$USER_HOME$/Dropbox/Public/Refactoring/src.m" />
         <option value="$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.h" />
-        <option value="$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m" />
         <option value="$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.m" />
+        <option value="$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="y" value="22" />
-    <option name="width" value="2560" />
+    <option name="width" value="2409" />
     <option name="height" value="1414" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -173,7 +182,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="OCUnit.RefactoringFirstExampleTests - testCustomerStatement">
+  <component name="RunManager" selected="OCUnit.RefactoringFirstExampleTests - testCustomerAmountOwedChildrensMovieLessThenThreeDays">
     <configuration default="true" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="RefactoringFirstExample" TARGET_NAME="RefactoringFirstExampleTests" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE" TEST_CLASS="RefactoringFirstExampleTests">
       <envs />
       <method>
@@ -192,7 +201,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="RefactoringFirstExampleTests - testCustomerStatement" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="RefactoringFirstExample" TARGET_NAME="RefactoringFirstExampleTests" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE" TEST_CLASS="RefactoringFirstExampleTests" TEST_METHOD="testCustomerStatement">
+    <configuration default="false" name="RefactoringFirstExampleTests - testCustomerAmountOwedChildrensMovieLessThenThreeDays" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="RefactoringFirstExample" TARGET_NAME="RefactoringFirstExampleTests" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE" TEST_CLASS="RefactoringFirstExampleTests" TEST_METHOD="testCustomerAmountOwedChildrensMovieLessThenThreeDays">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
@@ -212,7 +221,7 @@
     </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.RefactoringFirstExample - Debug" />
-      <item index="1" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - testCustomerStatement" />
+      <item index="1" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - testCustomerAmountOwedChildrensMovieLessThenThreeDays" />
       <item index="2" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - all" />
       <item index="3" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - testCreateCustomer" />
     </list>
@@ -227,18 +236,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="22" width="2560" height="1414" extended-state="0" />
+    <frame x="1" y="22" width="2409" height="1414" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32860824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17895152" sideWeight="0.57218844" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1785415" sideWeight="0.7325228" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42781156" sideWeight="0.9886317" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2674772" sideWeight="0.9886317" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -335,23 +344,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.h">
+    <entry file="file:///Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.15875487">
+        <state line="40" column="69" selection-start="2040" selection-end="2051" vertical-scroll-proportion="0.5345912">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m">
+    <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="38" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0">
+        <state line="28" column="49" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="29" selection-start="2028" selection-end="2028" vertical-scroll-proportion="0.71784234">
+        <state line="81" column="86" selection-start="1572" selection-end="1615" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="19" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.34582442">
           <folding />
         </state>
       </provider>

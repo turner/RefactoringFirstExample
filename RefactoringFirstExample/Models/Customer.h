@@ -10,10 +10,18 @@
 
 @class Rental;
 
-@interface Customer : NSObject
+@interface Customer : NSObject {
+
+    CGFloat totalAmountOwed;
+    NSUInteger  frequentRenterPoints;
+
+}
 
 @property(nonatomic, retain) NSString *name;
 @property(nonatomic, retain) NSMutableArray *rentals;
+
+@property (nonatomic, assign) CGFloat totalAmountOwed;
+@property (nonatomic, assign) NSUInteger frequentRenterPoints;
 
 -(id)initWithName:(NSString *)aName;
 -(void)addRental:(Rental *)aRental;
