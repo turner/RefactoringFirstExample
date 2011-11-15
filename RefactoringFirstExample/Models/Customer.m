@@ -8,6 +8,7 @@
 
 #import "Customer.h"
 #import "Rental.h"
+#import "Movie.h"
 
 @implementation Customer
 
@@ -23,7 +24,7 @@
 }
 
 -(id)initWithName:(NSString *)aName {
-    
+
     self = [super init];
     
     if (self) {
@@ -42,6 +43,60 @@
 
     [self.rentals addObject:aRental];
 
+}
+
+-(NSString *)statement {
+
+    CGFloat totalAmount = 0;
+    NSInteger frequentRenterPoints = 0;
+
+    NSMutableString *result = [NSMutableString stringWithFormat:@"Rental Record for %@", self.name];
+    
+    for (Rental *rental in self.rentals) {
+        
+        CGFloat thisAmount = 0.0;
+
+        switch (rental.movie.priceCode) {
+            
+            case RegularPriceCode:
+            {
+                thisAmount += 2.0;
+                if (rental.daysRented > 2) thisAmount += (rental.daysRented - 2) * 1.5;
+            }
+                break;
+
+            case NewReleasePriceCode:
+            {
+                thisAmount += rental.daysRented * 3;   
+            }
+                break;
+
+            case ChildrensPriceCode:
+            {
+                thisAmount += 1.5;
+                if (rental.daysRented > 3) thisAmount += (rental.daysRented - 3) * 1.5;
+            }
+                break;
+            
+        } // switch ()
+        
+        ++frequentRenterPoints;
+        
+        if (rental.movie.priceCode == NewReleasePriceCode && rental.daysRented > 1) ++frequentRenterPoints;
+
+
+        [result appendFormat:@"\t%@\t%.2f\n", rental.movie.title, thisAmount];
+
+        totalAmount += thisAmount;
+        
+    } // for (self.rentals) 
+
+
+    //add footer lines
+    [result appendFormat:@"Amount owed is %.2f", totalAmount];
+    [result appendFormat:@"You earned %d frequent renter points", frequentRenterPoints];
+
+    return result;
 }
 
 @end

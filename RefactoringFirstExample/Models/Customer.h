@@ -17,5 +17,6 @@
 
 -(id)initWithName:(NSString *)aName;
 -(void)addRental:(Rental *)aRental;
+-(NSString *)statement;
 
 @end
