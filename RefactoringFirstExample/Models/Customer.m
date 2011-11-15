@@ -50,7 +50,7 @@
     CGFloat totalAmount = 0;
     NSInteger frequentRenterPoints = 0;
 
-    NSMutableString *result = [NSMutableString stringWithFormat:@"Rental Record for %@", self.name];
+    NSMutableString *result = [NSMutableString stringWithFormat:@"\nRental Record for %@", self.name];
     
     for (Rental *rental in self.rentals) {
         
@@ -93,8 +93,8 @@
 
 
     //add footer lines
-    [result appendFormat:@"Amount owed is %.2f", totalAmount];
-    [result appendFormat:@"You earned %d frequent renter points", frequentRenterPoints];
+    [result appendFormat:@"\nAmount owed is %.2f", totalAmount];
+    [result appendFormat:@"\nYou earned %d frequent renter points", frequentRenterPoints];
 
     return result;
 }

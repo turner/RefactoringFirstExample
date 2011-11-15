@@ -28,10 +28,48 @@
     [super tearDown];
 }
 
+- (void) testCustomerStatement {
+
+    NSUInteger _daysRented = 0;
+
+    Movie *movie = nil;
+    
+    NSArray *movies =
+    [NSArray arrayWithObjects:
+
+    // 0
+     [NSDictionary dictionaryWithObjectsAndKeys:@"Mary Poppins", @"title", [NSNumber numberWithUnsignedInteger: ChildrensPriceCode], @"priceCode", nil],
+
+    // 1
+     [NSDictionary dictionaryWithObjectsAndKeys:@"Dirty Dozen", @"title", [NSNumber numberWithUnsignedInteger:   RegularPriceCode], @"priceCode", nil],
+
+    // 2
+     [NSDictionary dictionaryWithObjectsAndKeys:@"Inception", @"title", [NSNumber numberWithUnsignedInteger:NewReleasePriceCode], @"priceCode", nil],
+
+    // 3
+     [NSDictionary dictionaryWithObjectsAndKeys:@"The Wizard of OZ", @"title", [NSNumber numberWithUnsignedInteger: ChildrensPriceCode], @"priceCode", nil],
+
+    // 4
+     [NSDictionary dictionaryWithObjectsAndKeys:@"Blowup", @"title", [NSNumber numberWithUnsignedInteger:   RegularPriceCode], @"priceCode", nil],
+
+     nil];
+
+    Customer *customer = [[[Customer alloc] initWithName:@"Doug"] autorelease];
+    
+    movie = [[[Movie alloc] initWithMovieDictionary:[movies objectAtIndex:0]] autorelease];
+    
+    _daysRented = 3;
+    [customer addRental:[[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease]];
+    
+    STAssertTrue(_daysRented ==[(Rental *)[customer.rentals objectAtIndex:(customer.rentals.count - 1)] daysRented], @"rental %d should be of length %d", 0, _daysRented);
+
+    DLog(@"%@", [customer statement]);
+        
+}
+
 - (void) testCreateCustomer {
 
     Movie *movie = nil;
-
 
     NSArray *movies =
      [NSArray arrayWithObjects:
@@ -67,6 +105,7 @@
     [customer addRental:[[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease]];
 
     STAssertTrue(_daysRented ==[(Rental *)[customer.rentals objectAtIndex:(customer.rentals.count - 1)] daysRented], @"rental %d should be of length %d", 0, _daysRented);
+
 
 }
 
