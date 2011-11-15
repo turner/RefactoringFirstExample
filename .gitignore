@@ -1,0 +1,23 @@
+# osx noise
+.DS_Store
+profile
+
+# xcode noise
+build/*
+*.pbxuser
+*.mode1v3
+*.mode2v3
+
+# old skool
+.svn
+
+# Adobe Bridge shite
+.BridgeSort
+
+
+#rails
+sample_rails_app/log/*.log
+sample_rails_app/tmp/**/*
+sample_rails_app/doc/api
+sample_rails_app/doc/app
+*.sqlite3
