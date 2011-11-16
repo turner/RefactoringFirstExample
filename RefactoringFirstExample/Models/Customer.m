@@ -10,12 +10,14 @@
 #import "Rental.h"
 #import "Movie.h"
 
+@interface Customer ()
+
+@end
+
 @implementation Customer
 
 @synthesize name;
 @synthesize rentals;
-@synthesize totalAmountOwed;
-@synthesize frequentRenterPoints;
 
 - (void)dealloc {
     
@@ -49,57 +51,26 @@
 
 -(NSString *)statement {
 
-//    CGFloat totalAmount = 0;
+    float totalAmountOwed = 0.0;
 
-    self.totalAmountOwed = 0.0;
-
-    self.frequentRenterPoints = 0;
+    NSUInteger frequentRenterPoints = 0;
 
     NSMutableString *result = [NSMutableString stringWithFormat:@"\nRental Record for %@", self.name];
     
     for (Rental *rental in self.rentals) {
-        
-        CGFloat thisAmount = 0.0;
 
-        switch (rental.movie.priceCode) {
-            
-            case RegularPriceCode:
-            {
-                thisAmount += 2.0;
-                if (rental.daysRented > 2) thisAmount += (rental.daysRented - 2) * 1.5;
-            }
-                break;
+        frequentRenterPoints += [rental getFrequentRenterPoints];
 
-            case NewReleasePriceCode:
-            {
-                thisAmount += rental.daysRented * 3;   
-            }
-                break;
+        [result appendFormat:@"\t%@\t%.2f\n", rental.movie.title, [rental getCharge]];
 
-            case ChildrensPriceCode:
-            {
-                thisAmount += 1.5;
-                if (rental.daysRented > 3) thisAmount += (rental.daysRented - 3) * 1.5;
-            }
-                break;
-            
-        } // switch ()
-        
-        ++self.frequentRenterPoints;
-        
-        if (rental.movie.priceCode == NewReleasePriceCode && rental.daysRented > 1) ++self.frequentRenterPoints;
-
-
-        [result appendFormat:@"\t%@\t%.2f\n", rental.movie.title, thisAmount];
-
-        self.totalAmountOwed += thisAmount;
+        totalAmountOwed += [rental getCharge];
         
     } // for (self.rentals) 
 
 
     //add footer lines
-    [result appendFormat:@"\nAmount owed is %.2f", self.totalAmountOwed];
-    [result appendFormat:@"\nYou earned %d frequent renter points", self.frequentRenterPoints];
+    [result appendFormat:@"\nAmount owed is %.2f", totalAmountOwed];
+    [result appendFormat:@"\nYou earned %d frequent renter points", frequentRenterPoints];
 
     return result;
 }

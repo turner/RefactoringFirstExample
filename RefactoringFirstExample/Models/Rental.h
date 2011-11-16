@@ -17,4 +17,9 @@
 
 -(id)initWithMovie:(Movie *)aMovie daysRented:(NSUInteger)aDaysRented;
 
+- (CGFloat)getCharge;
+
+- (NSUInteger)getFrequentRenterPoints;
+
+
 @end
