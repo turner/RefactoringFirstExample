@@ -26,7 +26,7 @@
       <file leaf-file-name="Price.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Price.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -41,19 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NSException.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="8" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RefactoringFirstExampleTests.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="48" selection-start="708" selection-end="708" vertical-scroll-proportion="0.68609864">
+            <state line="41" column="0" selection-start="712" selection-end="712" vertical-scroll-proportion="0.39688715">
               <folding />
             </state>
           </provider>
@@ -120,7 +111,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="DirectoryView.Xcode" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,17 +185,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/Public/Refactoring" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="OCUnit.RefactoringFirstExampleTests -testChildrensPriceGetCharge">
     <configuration default="true" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="RefactoringFirstExample" TARGET_NAME="RefactoringFirstExampleTests" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE" TEST_CLASS="RefactoringFirstExampleTests">
@@ -262,19 +253,13 @@
       <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="RefactoringFirstExampleTests -testPriceGetChargeExceptionHandling" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="RefactoringFirstExample" TARGET_NAME="RefactoringFirstExampleTests" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE" TEST_CLASS="RefactoringFirstExampleTests" TEST_METHOD="testPriceGetChargeExceptionHandling">
-      <envs />
-      <RunnerSettings RunnerId="AppRunner" />
-      <ConfigurationWrapper RunnerId="AppRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="RefactoringFirstExampleTests -testChildrensPriceGetCharge" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="RefactoringFirstExample" TARGET_NAME="RefactoringFirstExampleTests" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE" TEST_CLASS="RefactoringFirstExampleTests" TEST_METHOD="testChildrensPriceGetCharge">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
-    <list size="9">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Application.RefactoringFirstExample - Debug" />
       <item index="1" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - all" />
       <item index="2" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - testCreateCustomer" />
@@ -282,8 +267,7 @@
       <item index="4" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests -testCustomerHTMPLStatementMethod" />
       <item index="5" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - testMovieExists" />
       <item index="6" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests - testCreateMovieFromDictionary" />
-      <item index="7" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests -testPriceGetChargeExceptionHandling" />
-      <item index="8" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests -testChildrensPriceGetCharge" />
+      <item index="7" class="java.lang.String" itemvalue="OCUnit.RefactoringFirstExampleTests -testChildrensPriceGetCharge" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -303,7 +287,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0907416" sideWeight="0.7006079" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13450024" sideWeight="0.7006079" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -369,11 +353,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Dropbox/Public/Refactoring/src.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1675" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file:///Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestCase.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="69" selection-start="2040" selection-end="2051" vertical-scroll-proportion="0.5345912" />
@@ -381,30 +360,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Customer.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="77" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.47081712">
-          <folding />
-        </state>
+        <state line="60" column="77" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.47081712" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Rental.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="289" selection-end="299" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="31" selection-start="289" selection-end="299" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Rental.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="23" selection-start="650" selection-end="650" vertical-scroll-proportion="0.5688716">
-          <folding />
-        </state>
+        <state line="46" column="23" selection-start="650" selection-end="650" vertical-scroll-proportion="0.5688716" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/PriceProtocol.h">
@@ -416,30 +387,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Movie.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="26" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="108" column="26" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Movie.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file:///Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="8" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Price.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="54" column="8" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Price.m">
@@ -449,9 +407,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RefactoringFirstExample/Models/Price.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RefactoringFirstExampleTests/RefactoringFirstExampleTests.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="48" selection-start="708" selection-end="708" vertical-scroll-proportion="0.68609864">
+        <state line="41" column="0" selection-start="712" selection-end="712" vertical-scroll-proportion="0.39688715">
           <folding />
         </state>
       </provider>

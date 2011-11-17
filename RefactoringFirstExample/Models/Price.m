@@ -28,22 +28,22 @@
 
 }
 
-- (PriceCode) getPriceCode {
-
-    return (PriceCode)NoPriceCode;
-}
-
-- (CGFloat)getCharge:(NSUInteger)daysRented {
-
-    NSException* myException = [NSException exceptionWithName:@"Price-Exception-getCharge"
-                                                       reason:@"Price class does not implement getCharge method"
-                                                     userInfo:nil];
-
-
-    [myException raise];
-
-    return 0;
-}
+//- (PriceCode) getPriceCode {
+//
+//    return (PriceCode)NoPriceCode;
+//}
+//
+//- (CGFloat)getCharge:(NSUInteger)daysRented {
+//
+//    NSException* myException = [NSException exceptionWithName:@"Price-Exception-getCharge"
+//                                                       reason:@"Price class does not implement getCharge method"
+//                                                     userInfo:nil];
+//
+//
+//    [myException raise];
+//
+//    return 0;
+//}
 
 - (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented {
 

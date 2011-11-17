@@ -39,17 +39,6 @@
 
 }
 
-
-- (void) testPriceGetChargeExceptionHandling {
-
-    Price *price = [[[Price alloc] init] autorelease];
-
-    CGFloat dev_null = [price getCharge:2];
-
-    STAssertEquals(1, 1, @"whah ?");
-
-}
-
 - (void) testCustomerHTMPLStatementMethod {
 
     NSUInteger _daysRented;

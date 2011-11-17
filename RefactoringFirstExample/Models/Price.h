@@ -15,22 +15,22 @@
 
 @interface ChildrensPrice : Price
 
-- (PriceCode) getPriceCode;
-- (CGFloat)getCharge:(NSUInteger)daysRented;
+//- (PriceCode) getPriceCode;
+//- (CGFloat)getCharge:(NSUInteger)daysRented;
 
 @end
 
 @interface NewReleasePrice : Price
 
-- (PriceCode) getPriceCode;
-- (CGFloat)getCharge:(NSUInteger)daysRented;
-- (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented;
+//- (PriceCode) getPriceCode;
+//- (CGFloat)getCharge:(NSUInteger)daysRented;
+//- (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented;
 
 @end
 
 @interface RegularPrice : Price
 
-- (PriceCode) getPriceCode;
-- (CGFloat)getCharge:(NSUInteger)daysRented;
+//- (PriceCode) getPriceCode;
+//- (CGFloat)getCharge:(NSUInteger)daysRented;
 
 @end

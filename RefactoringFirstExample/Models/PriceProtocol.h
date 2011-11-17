@@ -14,7 +14,11 @@ enum {
 typedef NSUInteger PriceCode;
 
 @protocol PriceProtocol
+
+@optional
+
 - (PriceCode)getPriceCode;
 - (CGFloat)getCharge:(NSUInteger)daysRented;
 - (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented;
+
 @end
