@@ -28,6 +28,32 @@
     [super tearDown];
 }
 
+- (void) testCustomerHTMPLStatementMethod {
+
+    NSUInteger _daysRented;
+
+    Customer *customer = [[[Customer alloc] initWithName:@"Doug"] autorelease];
+
+    Movie *movie =
+    [[[Movie alloc] initWithMovieDictionary:[NSDictionary dictionaryWithObjectsAndKeys:
+                                             @"Dirty Dozen", @"title",
+                                             [NSNumber numberWithUnsignedInteger:RegularPriceCode], @"priceCode",
+                                             nil]
+      ] autorelease];
+
+
+    // Less then or equal to 2 day rental
+    _daysRented = 2;
+    [customer addRental:[[[Rental alloc] initWithMovie:movie daysRented:_daysRented] autorelease]];
+
+    DLog(@"%@", [customer htmlStatement]);
+
+    STAssertEquals(1, 1, @"whah ?");
+
+
+}
+
+
 - (void) testCustomerStatementMethod {
     
     NSUInteger _daysRented;
