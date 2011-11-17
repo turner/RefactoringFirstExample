@@ -35,7 +35,14 @@
 
 - (CGFloat)getCharge:(NSUInteger)daysRented {
 
-    return -11.11;
+    NSException* myException = [NSException exceptionWithName:@"Price-Exception-getCharge"
+                                                       reason:@"Price class does not implement getCharge method"
+                                                     userInfo:nil];
+
+
+    [myException raise];
+
+    return 0;
 }
 
 - (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented {

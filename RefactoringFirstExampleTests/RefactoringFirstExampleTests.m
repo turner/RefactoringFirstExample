@@ -11,6 +11,7 @@
 #import "Rental.h"
 #import "Logging.h"
 #import "Customer.h"
+#import "Price.h"
 
 @implementation RefactoringFirstExampleTests
 
@@ -26,6 +27,27 @@
     // Tear-down code here.
     
     [super tearDown];
+}
+
+- (void) testChildrensPriceGetCharge {
+
+    ChildrensPrice *price = [[[ChildrensPrice alloc] init] autorelease];
+
+    CGFloat charge = [price getCharge:5];
+
+    STAssertTrue(charge > 1.0, nil);
+
+}
+
+
+- (void) testPriceGetChargeExceptionHandling {
+
+    Price *price = [[[Price alloc] init] autorelease];
+
+    CGFloat dev_null = [price getCharge:2];
+
+    STAssertEquals(1, 1, @"whah ?");
+
 }
 
 - (void) testCustomerHTMPLStatementMethod {
@@ -49,7 +71,6 @@
     DLog(@"%@", [customer htmlStatement]);
 
     STAssertEquals(1, 1, @"whah ?");
-
 
 }
 
