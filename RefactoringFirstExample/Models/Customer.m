@@ -12,6 +12,9 @@
 
 @interface Customer ()
 
+- (CGFloat)getTotalAmountOwed;
+- (NSUInteger)getFrequentRenterPoints;
+
 @end
 
 @implementation Customer
@@ -51,28 +54,66 @@
 
 -(NSString *)statement {
 
-    float totalAmountOwed = 0.0;
-
-    NSUInteger frequentRenterPoints = 0;
-
     NSMutableString *result = [NSMutableString stringWithFormat:@"\nRental Record for %@", self.name];
     
     for (Rental *rental in self.rentals) {
 
-        frequentRenterPoints += [rental getFrequentRenterPoints];
-
         [result appendFormat:@"\t%@\t%.2f\n", rental.movie.title, [rental getCharge]];
 
-        totalAmountOwed += [rental getCharge];
-        
-    } // for (self.rentals) 
-
+    } // for (self.rentals)
 
     //add footer lines
-    [result appendFormat:@"\nAmount owed is %.2f", totalAmountOwed];
-    [result appendFormat:@"\nYou earned %d frequent renter points", frequentRenterPoints];
+    [result appendFormat:@"\nAmount owed is %.2f", [self getTotalAmountOwed]];
+    [result appendFormat:@"\nYou earned %d frequent renter points", [self getFrequentRenterPoints]];
 
     return result;
+}
+
+
+-(NSString *)htmlStatement {
+
+    NSMutableString *result = [NSMutableString stringWithFormat:@"<H1>Rentals for <EM>%@</EM></H1><P>\n", self.name];
+
+    for (Rental *rental in self.rentals) {
+
+        [result appendFormat:@"%@: $%.02f<BR>\n", rental.movie.title, [rental getCharge]];
+
+    } // for (self.rentals)
+
+    // footer
+    [result appendFormat:@"<P>You owe <EM>$%.2f</EM></P>\n", [self getTotalAmountOwed]];
+    [result appendFormat:@"On this rental you earned <EM>%d</EM> frequent renter points</P>", [self getFrequentRenterPoints]];
+
+    return result;
+
+}
+
+- (CGFloat)getTotalAmountOwed {
+
+    CGFloat totalAmountOwed = 0.0;
+
+    for (Rental *rental in self.rentals) {
+
+
+        totalAmountOwed += [rental getCharge];
+
+    } // for (self.rentals)
+
+    return totalAmountOwed;
+}
+
+- (NSUInteger)getFrequentRenterPoints {
+
+    NSUInteger frequentRenterPoints = 0;
+
+    for (Rental *rental in self.rentals) {
+
+        frequentRenterPoints += [rental getFrequentRenterPoints];
+
+    } // for (self.rentals)
+
+    return frequentRenterPoints;
+
 }
 
 @end
