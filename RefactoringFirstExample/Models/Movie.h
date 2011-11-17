@@ -17,15 +17,20 @@ enum {
 
 typedef NSUInteger PriceCode;
 
+@class Price;
 
 @interface Movie : NSObject
 
 @property(nonatomic, retain) NSString *title;
-
-@property(nonatomic) PriceCode priceCode;
+@property(nonatomic, retain) Price *price;
 
 -(id)initWithTitle:(NSString *)aTitle priceCode:(PriceCode)aPriceCode;
 -(id)initWithMovieDictionary:(NSDictionary *)movieDictionary;
+
+- (PriceCode)getPriceCode;
+- (CGFloat)getCharge:(NSUInteger)daysRented;
+
+- (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented;
 
 
 @end

@@ -36,6 +36,26 @@
                BlueprintName = "RefactoringFirstExampleTests"
                ReferencedContainer = "container:RefactoringFirstExample.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "RefactoringFirstExampleTests/testMovieExists">
+               </Test>
+               <Test
+                  Identifier = "RefactoringFirstExampleTests/testCustomerStatementMethod">
+               </Test>
+               <Test
+                  Identifier = "RefactoringFirstExampleTests/testCustomerHTMPLStatementMethod">
+               </Test>
+               <Test
+                  Identifier = "RefactoringFirstExampleTests/testCreateRental">
+               </Test>
+               <Test
+                  Identifier = "RefactoringFirstExampleTests/testCreateMovieFromParams">
+               </Test>
+               <Test
+                  Identifier = "RefactoringFirstExampleTests/testCreateCustomer">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

@@ -132,13 +132,13 @@
                      nil];
 
 
+    // movie dictionary assertions
 //    STAssertNotNil([[movies objectAtIndex:0] objectForKey:@"priceCode"], nil);
-
 //    STAssertTrue(ChildrensPriceCode == [[[movies objectAtIndex:0] objectForKey:@"priceCode"] unsignedIntegerValue], @"incorrect price code");
 
     Movie *maryPoppins = [[[Movie alloc] initWithMovieDictionary:[movies objectAtIndex:0]] autorelease];
 
-    STAssertTrue(ChildrensPriceCode == maryPoppins.priceCode, @"incorrect price code");
+    STAssertTrue(ChildrensPriceCode == [maryPoppins getPriceCode], @"incorrect price code");
     STAssertTrue([maryPoppins.title isEqualToString:@"Mary Poppins"], @"incorrect title");
 
 }
@@ -163,12 +163,6 @@
 
     Movie *movie = [[[Movie alloc] init] autorelease];
     STAssertNotNil(movie, @"movie should not be nil");
-}
-
-- (void)testExample
-{
-//    STFail(@"Unit tests are not implemented yet in RefactoringFirstExampleTests");
-    STAssertEquals(1, 1, @"1 should equal 1");
 }
 
 @end
