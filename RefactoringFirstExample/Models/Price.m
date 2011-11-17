@@ -22,8 +22,6 @@
     
     if (self) {
         
-        DLog(@"");
-        
     }
     
     return self;
@@ -32,9 +30,17 @@
 
 - (PriceCode) getPriceCode {
 
-    DLog(@"");
-    
     return (PriceCode)NoPriceCode;
+}
+
+- (CGFloat)getCharge:(NSUInteger)daysRented {
+
+    return -11.11;
+}
+
+- (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented {
+
+    return 1;
 }
 
 @end
@@ -52,8 +58,6 @@
     
     if (self) {
         
-        DLog(@"");
-        
     }
     
     return self;
@@ -62,9 +66,17 @@
 
 - (PriceCode) getPriceCode {
     
-    DLog(@"");
-    
     return (PriceCode)ChildrensPriceCode;
+}
+
+- (CGFloat)getCharge:(NSUInteger)daysRented {
+
+    CGFloat result = 0.0;
+    
+    result += 1.5;
+    if (daysRented > 3) result += (daysRented - 3) * 1.5;
+    
+    return result;
 }
 
 @end
@@ -82,8 +94,6 @@
     
     if (self) {
         
-        DLog(@"");
-        
     }
     
     return self;
@@ -92,9 +102,17 @@
 
 - (PriceCode) getPriceCode {
     
-    DLog(@"");
-    
     return (PriceCode)NewReleasePriceCode;
+}
+
+- (CGFloat)getCharge:(NSUInteger)daysRented {
+    
+    return daysRented * 3;
+}
+
+- (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented {
+
+    return (daysRented > 1) ? 2 : 1;
 }
 
 @end
@@ -109,11 +127,9 @@
 -(id)init {
     
     self = [super init];
-    
+
     if (self) {
-        
-        DLog(@"");
-        
+
     }
     
     return self;
@@ -122,9 +138,17 @@
 
 - (PriceCode) getPriceCode {
     
-    DLog(@"");
-    
     return (PriceCode)RegularPriceCode;
+}
+
+- (CGFloat)getCharge:(NSUInteger)daysRented {
+    
+    CGFloat result = 0.0;
+    
+    result += 2.0;
+    if (daysRented > 2) result += (daysRented - 2) * 1.5;
+    
+    return result;
 }
 
 @end

@@ -70,6 +70,7 @@
 		63E489554FFE15CA2B324FE0 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		63E489554FFE15CA2B324FE1 /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
 		63E489554FFE15CA2B324FE2 /* Observer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observer.m; sourceTree = "<group>"; };
+		63E489554FFE15CA2B324FE4 /* PriceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		319629F314720569000A250C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63E489554FFE15CA2B324FE4 /* PriceProtocol.h */,
 				3160F64A1475521D00DF8C4B /* Price.h */,
 				3160F64B1475521D00DF8C4B /* Price.m */,
 				319629F914720580000A250C /* Rental.h */,

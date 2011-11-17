@@ -8,27 +8,29 @@
 
 #import <Foundation/Foundation.h>
 #import "Movie.h"
+#import "PriceProtocol.h"
 
-@interface Price : NSObject
-
-- (PriceCode) getPriceCode;
-
+@interface Price : NSObject <PriceProtocol>
 @end
 
 @interface ChildrensPrice : Price
 
 - (PriceCode) getPriceCode;
+- (CGFloat)getCharge:(NSUInteger)daysRented;
 
 @end
 
 @interface NewReleasePrice : Price
 
 - (PriceCode) getPriceCode;
+- (CGFloat)getCharge:(NSUInteger)daysRented;
+- (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented;
 
 @end
 
 @interface RegularPrice : Price
 
 - (PriceCode) getPriceCode;
+- (CGFloat)getCharge:(NSUInteger)daysRented;
 
 @end

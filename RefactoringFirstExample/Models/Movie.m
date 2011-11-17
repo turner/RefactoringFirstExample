@@ -28,6 +28,50 @@
     [super dealloc];
 }
 
+- (id)init {
+
+    self = [super init];
+
+    if (self) {
+
+        self.title = @"Untitled";
+
+        [self setPriceCode:NoPriceCode];
+
+    }
+
+    return self;
+
+}
+
+-(id)initWithTitle:(NSString *)aTitle priceCode:(PriceCode)aPriceCode {
+
+    self = [super init];
+
+    if (self) {
+
+        self.title = aTitle;
+        [self setPriceCode:aPriceCode];
+    }
+
+    return self;
+
+}
+
+-(id)initWithMovieDictionary:(NSDictionary *)movieDictionary {
+
+    self = [super init];
+
+    if (self) {
+
+        self.title = [movieDictionary objectForKey:@"title"];
+       [self setPriceCode:[[movieDictionary objectForKey:@"priceCode"] unsignedIntegerValue]];
+    }
+
+    return self;
+
+}
+
 - (void)setPriceCode:(PriceCode)aPriceCode {
 
     switch (aPriceCode) {
@@ -66,87 +110,15 @@
 
 }
 
-- (id)init {
-    self = [super init];
-    if (self) {
-
-        self.title = @"Untitled";
-
-        [self setPriceCode:NoPriceCode];
-//        self.priceCode = NoPriceCode;
-    }
-
-    return self;
-//To change the template use AppCode | Preferences | File Templates.
-}
-
--(id)initWithTitle:(NSString *)aTitle priceCode:(PriceCode)aPriceCode {
-
-    self = [super init];
-
-    if (self) {
-
-        self.title = aTitle;
-        [self setPriceCode:aPriceCode];
-//        self.priceCode = aPriceCode;
-    }
-
-    return self;
-
-}
-
--(id)initWithMovieDictionary:(NSDictionary *)movieDictionary {
-
-    self = [super init];
-
-    if (self) {
-
-        self.title = [movieDictionary objectForKey:@"title"];
-       [self setPriceCode:[[movieDictionary objectForKey:@"priceCode"] unsignedIntegerValue]];
-//        self.priceCode = [[movieDictionary objectForKey:@"priceCode"] unsignedIntegerValue];
-    }
-
-    return self;
-
-}
-
 - (CGFloat)getCharge:(NSUInteger)daysRented {
 
-    
-    CGFloat thisAmount = 0.0;
-    
-    switch ([self getPriceCode]) {
-
-        case RegularPriceCode:
-        {
-            thisAmount += 2.0;
-            if (daysRented > 2) thisAmount += (daysRented - 2) * 1.5;
-        }
-            break;
-
-        case NewReleasePriceCode:
-        {
-            thisAmount += daysRented * 3;
-        }
-            break;
-
-        case ChildrensPriceCode:
-        {
-            thisAmount += 1.5;
-            if (daysRented > 3) thisAmount += (daysRented - 3) * 1.5;
-        }
-            break;
-
-    } // switch ()
-
-    return thisAmount;
+    return [self.price getCharge:daysRented];
 }
 
 - (NSUInteger)getFrequentRenterPoints:(NSUInteger)daysRented {
 
-    if (NewReleasePriceCode == [self getPriceCode] && daysRented > 1) return 2;
+    return [self.price getFrequentRenterPoints:daysRented];
 
-    return 1;
 }
 
 @end
